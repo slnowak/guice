@@ -27,7 +27,7 @@ See the Apache License Version 2.0 for the specific language governing permissio
 
   <groupId>com.google.inject</groupId>
   <artifactId>guice-parent</artifactId>
-  <version>4.1.0-jdk9</version>
+  <version>4.1.0-jdk9-rototor1</version>
 
   <name>Google Guice</name>
 
@@ -84,17 +84,16 @@ See the Apache License Version 2.0 for the specific language governing permissio
     </license>
   </licenses>
 
-  <distributionManagement>
-    <!-- override the parent's directory to point to the canonical place, and use https. -->
-    <repository>
-      <id>google-releases</id>
-      <url>https://oss.sonatype.org/service/local/staging/deploy/maven2/</url>
-    </repository>
-    <snapshotRepository>
-      <id>google-snapshots</id>
-      <url>https://oss.sonatype.org/content/repositories/snapshots</url>
-    </snapshotRepository>
-  </distributionManagement>
+	<distributionManagement>
+		<repository>
+			<id>repo-deploy</id>
+			<url>http://ems:emsems@10.50.3.5:8081/artifactory/ext-release-local</url>
+		</repository>
+		<snapshotRepository>
+			<id>repo-deploy-snapshot</id>
+			<url>http://ems:emsems@10.50.3.5:8081/artifactory/ext-snapshot-local</url>
+		</snapshotRepository>
+	</distributionManagement>
 
   <modules>
     <module>bom</module>
@@ -144,12 +143,12 @@ See the Apache License Version 2.0 for the specific language governing permissio
       <dependency>
         <groupId>com.google.guava</groupId>
         <artifactId>guava</artifactId>
-        <version>19.0</version>
+        <version>23.0</version>
       </dependency>
       <dependency>
         <groupId>com.google.guava</groupId>
         <artifactId>guava-testlib</artifactId>
-        <version>19.0</version>
+        <version>23.0</version>
       </dependency>
       <dependency>
         <groupId>org.ow2.asm</groupId>
@@ -325,7 +324,7 @@ See the Apache License Version 2.0 for the specific language governing permissio
         <plugin>
           <groupId>org.apache.felix</groupId>
           <artifactId>maven-bundle-plugin</artifactId>
-          <version>2.1.0</version>
+          <version>3.3.0</version>
           <configuration>
             <instructions>
               <module>com.google.inject</module>

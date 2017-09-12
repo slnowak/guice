@@ -565,5 +565,8 @@ public class ThrowingProviderBinder {
     @Override public boolean apply(Method input) {
       return !input.isBridge() && !input.isSynthetic();
     }
+    @Override public boolean test(Method input) {
+      return !input.isBridge() && !input.isSynthetic();
+    }
   }
 }
