@@ -27,7 +27,7 @@ See the Apache License Version 2.0 for the specific language governing permissio
 
   <groupId>com.google.inject</groupId>
   <artifactId>guice-parent</artifactId>
-  <version>4.1.0-jdk9-rototor1</version>
+  <version>4.1.0-jdk9-rototor2</version>
 
   <name>Google Guice</name>
 
@@ -153,7 +153,7 @@ See the Apache License Version 2.0 for the specific language governing permissio
       <dependency>
         <groupId>org.ow2.asm</groupId>
         <artifactId>asm</artifactId>
-        <version>5.0.3</version>
+        <version>5.2</version>
       </dependency>
       <dependency>
         <groupId>cglib</groupId>
